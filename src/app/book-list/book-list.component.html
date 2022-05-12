@@ -1,0 +1,27 @@
+<div *ngIf='isAuthorized'><i>This is an Autorized Book Store</i></div>
+<table>
+    <thead>
+        <th>Book Id</th>
+        <th>Book Title</th>
+        <th>Book Author</th>
+        <th>Book Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let book of books'>
+                <td>
+                 <button (click)="showDetails(book)">{{ book.id}}</button> 
+                </td>
+                <td>
+                    {{ book.title}}
+                </td>
+                <td>
+                    {{ book.author}}
+                </td>
+                <td>
+                    {{ book.price}}
+                </td>
+
+
+        </tr>
+    </tbody>
+</table>
